@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  require 'rotp'
+  require "rotp"
 
   # Only allow modern browsers supporting webp images, web push, badges, import maps, CSS nesting, and CSS :has.
   allow_browser versions: :modern
@@ -54,7 +54,7 @@ class ApplicationController < ActionController::Base
         <input type="text" name="auth_code" />
         <button type="submit">Verify</button>
       </form>
-      
+#{'      '}
       <!-- Кнопка для скидання -->
 <form action="/reset" method="get" style="margin-top: 1em;">
   <button type="submit">Reset Verification</button>

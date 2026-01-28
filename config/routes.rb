@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   # root to: "home#index"
 
   scope :blog do
-    resources :posts, only: [:index, :show] do
+    resources :posts, only: [ :index, :show ] do
       member do
         resources :comments
       end
@@ -32,7 +32,7 @@ Rails.application.routes.draw do
   # auth
   get "/auth", to: "application#auth"
   get "/otp_form", to: "application#otp_form"
-  get '/reset', to: 'application#reset_verification'
+  get "/reset", to: "application#reset_verification"
 
   root "application#otp_form"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
